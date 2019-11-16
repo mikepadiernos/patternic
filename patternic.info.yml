@@ -1,0 +1,16 @@
+name: Patternic
+type: theme
+description: 'Bare-bone theme, used for my portfolio. Based on the Proto Drupal 8 theme.'
+core: 8.x
+regions:
+  header:       "Header"
+  navigation:   "Navigation"
+  hero:         "Hero"
+  highlight:    "Highlight"
+  help:         "Help"
+  content:      "Content"
+  sidebar:      "Sidebar"
+  footer:       "Footer"
+  disabled:     "Disable"
+libraries:
+  - patternic/global
