@@ -1,5 +1,34 @@
 {
   "dependencies": {
+    "nib": "^1.1.2",
+    "stylus": "^0.54.7",
     "typographic": "^3.0.0"
-  }
+  },
+  "name": "patternic",
+  "description": "Drupal theme used for my portfolio. Based on the Proto Drupal 8 theme. The Proto theme is a bare-bone theme used as foundation for any theme to build on.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-stylus": "^2.7.0",
+    "nib": "^1.1.2",
+    "rupture": "^0.7.1",
+    "typographic": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikepadiernos/patternic.git"
+  },
+  "keywords": [
+    "drupal"
+  ],
+  "author": "M. Padiernos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikepadiernos/patternic/issues"
+  },
+  "homepage": "https://github.com/mikepadiernos/patternic#readme"
 }
