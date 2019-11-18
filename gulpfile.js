@@ -1,18 +1,25 @@
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
+const postcss = require('gulp-postcss');
 const nib = require('nib');
 const rupture = require('rupture');
 const typographic = require('typographic');
+const csswring = require('csswring');
 
-gulp.task('theme', function(done) {
-	gulp.src('./source/theme.styl')
+gulp.task('theme', () => {
+
+	const processors = [
+			csswring
+		];
+
+	return gulp.src('./source/theme.styl')
 		.pipe(stylus({
 			use: [nib(), rupture(), typographic()]
 		}))
-		.pipe(gulp.dest('./css/'));
-		done();
+		.pipe(postcss(processors))
+		.pipe(gulp.dest('./css'));
 });
 
-gulp.task('watch', function() {
-	gulp.watch('./source/*.styl', ['theme']);
+gulp.task('default', () => {
+	gulp.watch('**/*.styl', gulp.series('theme'));
 });
