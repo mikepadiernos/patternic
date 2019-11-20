@@ -1,12 +1,14 @@
 // BRANDING
 
-.block-branding
-	display flex
+// .block-branding
+// 	display flex
 
-+tablet()
+// +mobile()
++between('xs', 's')
 	.block-branding
 		align-items center
 		flex-flow row wrap
+		display flex
 		float left
 		padding 12px
 		a
@@ -15,8 +17,24 @@
 			&.site-name
 				margin 0 8.5px
 
+// @media (min-width $screen-md-min) and (max-height $screen-sm-min)
+// +above('xs', 'l', orientation: landscape)
+// +tablet(orientation: landscape)
+// +tablet()
++between('m', 'l')
+	.block-branding
+		width 200px
+		height auto
+		display flex
+		align-items flex-start
+		padding 1.2rem 0 0 1.2rem
+		a
+			&.site-name
+				display none
+
 +desktop()
 	.block-branding
+		display flex
 		flex-direction column
 		align-items center
 		justify-content center
@@ -27,10 +45,3 @@
 			&.site-name
 				display none
 
-// @media (min-width $screen-md-min) and (max-height $screen-sm-min)
-// +tablet(orientation: landscape)
-// 	.block-branding
-// 		width 200px
-// 		height auto
-// 		display flex
-// 		align-items flex-start
