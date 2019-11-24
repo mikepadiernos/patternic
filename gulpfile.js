@@ -20,6 +20,20 @@ gulp.task('theme', () => {
 		.pipe(gulp.dest('./css'));
 });
 
+gulp.task('seeds', () => {
+
+  const processors = [
+    csswring
+  ];
+
+  return gulp.src('./source/seeds.styl')
+    .pipe(stylus({
+      use: [nib(), rupture(), typographic()]
+    }))
+    .pipe(postcss(processors))
+    .pipe(gulp.dest('./css'));
+});
+
 gulp.task('default', () => {
 	gulp.watch('**/*.styl', gulp.series('theme'));
 });
