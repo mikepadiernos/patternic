@@ -35,5 +35,5 @@ gulp.task('seeds', () => {
 });
 
 gulp.task('default', () => {
-	gulp.watch('**/*.styl', gulp.series('theme'));
+	gulp.watch('**/*.styl', gulp.series('seeds'), gulp.series('theme'));
 });
