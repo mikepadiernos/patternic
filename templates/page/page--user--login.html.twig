@@ -8,12 +8,12 @@
             <img src="{{ global_variables.logo }}" alt="{{ global_variables.site_name }}" />
           </a>
         </h1>
-        <span class="back_link">
-          <a href="{{ url('<front>') }}">&larr; {{ 'Back'|t }} to Homepage</a>
-        </span>
       </div>
   
       <div id="login_main_part" class="login_main_part">
+        <span class="back_link">
+          <a href="{{ url('<front>') }}">&larr; {{ 'Back'|t }} to Homepage</a>
+        </span>
         <h2 class="title">{{ title }}</h2>
         {{ page.highlighted }}
         {{ messages }}
