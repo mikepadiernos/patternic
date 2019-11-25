@@ -11,11 +11,43 @@
 		border-bottom 1px solid text-light
 		color text-light
 		box-sizing border-box
-		padding-top 10px
+		//padding-top 10px
+		margin-bottom 0
 		width 100%
+	input,
+	select
+		height 44px
+		&.form-checkbox
+			width auto
+			height auto
 
 .form-actions
 	display flex
 	align-items center
 	input
 		margin-bottom 0
+
+
+details
+	&.form-wrapper
+		// border: 1px solid #ccc
+		border-radius 2px
+		padding 10px 12px
+		margin-bottom 1rem
+		> summary
+			&.details_summary
+				background #efefef
+				margin -10px -12px 10px
+				padding 10px 12px
+	> summary
+		&::-webkit-details-marker
+			display none
+	a
+		&.button
+			//padding 10px 30px
+			//@include button()
+			&:hover
+				text-decoration none
+				//background lighten($primary-color, 5%)
+	.form-wrapper
+		margin 20px 0
