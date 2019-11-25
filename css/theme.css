@@ -185,8 +185,14 @@ sup {
 sub {
   bottom: -0.25em;
 }
+.is-float-left {
+  float: left;
+}
 .is-float-right {
   float: right;
+}
+.half-width {
+  width: 50%;
 }
 .arrow-icon {
   background-color: transparent;
@@ -302,6 +308,9 @@ sub {
   line-height: 1.3333333;
   border-radius: 6px;
 }
+.caption p {
+  margin-bottom: 0;
+}
 .container {
   padding: 0 1.1em;
 }
@@ -331,6 +340,11 @@ input.button:hover {
 .has-margin-top-quarter {
   margin-top: 1.25rem;
 }
+.meta {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #efefef;
+  margin-bottom: 1rem;
+}
 .node {
   margin-bottom: 3.5rem;
 }
@@ -340,10 +354,10 @@ input.button:hover {
   }
 }
 .page-title {
-  padding: 4rem 1.1em 3.8rem;
+  padding: 3.9rem 1.1em 3.7rem;
 }
-@media only screen and (min-width: 600px) and (max-width: 1050px) {
-  .page-title .page-title {
+@media only screen and (min-width: 800px) and (max-width: 1050px) {
+  .page-title.page-title {
     padding: 1.8rem 1.1em;
   }
 }
@@ -728,7 +742,7 @@ td {
     display: flex;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .block-branding {
     -webkit-box-align: center;
     -moz-box-align: center;
@@ -761,7 +775,7 @@ td {
     margin: 0 8.5px;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1050px) {
+@media only screen and (min-width: 800px) and (max-width: 1050px) {
   .block-branding {
     width: 200px;
     height: auto;
@@ -907,12 +921,12 @@ main {
 #content.content.with-sidebar #main-content .container {
   width: auto;
 }
-@media only screen and (min-width: 600px) and (max-width: 1050px) {
+@media only screen and (min-width: 800px) and (max-width: 1800px) {
   #content.content.with-sidebar #main-content {
     width: 100%;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   #content.content {
     margin-left: 200px;
     display: -webkit-box;
@@ -971,7 +985,7 @@ body #header.header {
   right: 0;
   left: 0;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   body #header.header {
     position: fixed;
     width: 200px;
@@ -1008,20 +1022,32 @@ body.page-front #hero.hero {
   -webkit-justify-content: center;
   justify-content: center;
 }
-@media only screen and (max-width: 600px) {
-  #hero.hero {
+@media only screen and (max-width: 800px) {
+  #hero #hero.hero {
     margin-top: 82px;
   }
-  #hero.hero h1,
-  #hero.hero h2,
-  #hero.hero p {
+  #hero #hero.hero h2 h1,
+  #hero #hero.hero h2 h2,
+  #hero #hero.hero h2 p {
     padding-left: 3rem;
     padding-right: 3rem;
     text-align: center;
     width: auto;
   }
 }
-@media only screen and (max-width: 600px) {
+.media--view-mode-half-width {
+  width: 50%;
+  display: contents;
+}
+@media only screen and (max-width: 800px) {
+  .embedded-entity {
+    margin-bottom: 1rem;
+  }
+  .media--view-mode-half-width {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
   header {
     background-color: #fff;
     -webkit-box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.1);
@@ -1147,7 +1173,7 @@ body.page-front #hero.hero {
     top: 0;
   }
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
   .menu-button,
   .menu-icon {
     display: none;
@@ -1209,6 +1235,17 @@ body.page-front #hero.hero {
   }
   nav ul li.nav-item.is-active-trail a:before {
     background-color: #ff6f00;
+  }
+}
+.prose .align-left {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+@media only screen and (max-width: 800px) {
+  .prose .align-left {
+    margin-right: 0;
+    margin-top: 0;
+    float: none;
   }
 }
 ul {

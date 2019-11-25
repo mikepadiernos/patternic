@@ -4,7 +4,7 @@
 // 	display flex
 
 // +mobile()
-+between('xs', 's')
++between('xs', 'm')
 	.block-branding
 		align-items center
 		flex-flow row wrap
@@ -21,7 +21,7 @@
 // +above('xs', 'l', orientation: landscape)
 // +tablet(orientation: landscape)
 // +tablet()
-+between('m', 'l')
++at('l')
 	.block-branding
 		width 200px
 		height auto
@@ -32,7 +32,7 @@
 			&.site-name
 				display none
 
-+desktop()
++above('xl')
 	.block-branding
 		display flex
 		flex-direction column
@@ -44,4 +44,3 @@
 		a
 			&.site-name
 				display none
-
