@@ -1,18 +1,29 @@
 // SPOTLIGHT
 
-.spotlight
-	text-align center
-	h1,
-	h2
-		margin-bottom 12px
-	.field-type-image
-		overflow hidden
-		width 200px
-		height 200px
-		margin 0 auto 1rem
-		position relative
-		border-radius 50%
-		img
-			position absolute
-			width 180%
-			left -5.5rem
++between('xs', 'm')
+	.spotlight
+		h1
+			margin-bottom 1.5rem
+		h2
+			margin-bottom 2rem
+		.field-type-image
+			img
+				left -6.5rem
+
++above('m')
+	.spotlight
+		text-align center
+		//h1,
+		//h2
+		//	margin-bottom 12px
+		.field-type-image
+			overflow hidden
+			width 200px
+			height 200px
+			margin 0 auto 1rem
+			position relative
+			border-radius 50%
+			img
+				position absolute
+				width 180%
+				left -5.5rem
