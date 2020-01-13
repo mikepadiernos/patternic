@@ -16,3 +16,54 @@ layout_homepage:
       label: Middle
     bottom:
       label: Bottom
+      
+layout_card:
+  label: 'Card'
+  path: layouts/card
+  template: layout--card
+  library: patternic/card
+  category: 'Patternic: 1'
+  default_region: top
+  icon_map:
+    - [header]
+    - [body]
+    - [footer]
+  regions:
+    header:
+      label: Header
+    body:
+      label: Body
+    footer:
+      label: Footer
+      
+layout_canvas:
+  label: 'Canvas'
+  path: layouts/canvas
+  template: layout--canvas
+  library: patternic/canvas
+  category: 'Patternic: 1'
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+layout_editorial:
+  label: 'Editorial'
+  path: layouts/editorial
+  template: layout--editorial
+  library: patternic/editorial
+  category: 'Patternic: 2'
+  default_region: left
+  icon_map:
+    - [left]
+    - [right]
+    - [bottom]
+  regions:
+    left:
+      label: Left
+    right:
+      label: Right
+    bottom:
+      label: Bottom
