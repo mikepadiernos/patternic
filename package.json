@@ -9,6 +9,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "csswring": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",

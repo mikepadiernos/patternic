@@ -1,15 +1,17 @@
+
+const cssnano = require('cssnano');
 const gulp = require('gulp');
-const stylus = require('gulp-stylus');
-const postcss = require('gulp-postcss');
 const nib = require('nib');
+const postcss = require('gulp-postcss');
 const rupture = require('rupture');
+const stylus = require('gulp-stylus');
 const typographic = require('typographic');
-const csswring = require('csswring');
+
 
 gulp.task('theme', () => {
 
 	const processors = [
-			csswring
+    cssnano
 		];
 
 	return gulp.src('./source/theme.styl')
@@ -23,7 +25,7 @@ gulp.task('theme', () => {
 gulp.task('seeds', () => {
 
   const processors = [
-    csswring
+    cssnano
   ];
 
   return gulp.src('./source/seeds.styl')
