@@ -1,11 +1,11 @@
-
-const cssnano = require('cssnano');
-const gulp = require('gulp');
-const nib = require('nib');
-const postcss = require('gulp-postcss');
-const rupture = require('rupture');
-const stylus = require('gulp-stylus');
-const typographic = require('typographic');
+const axis 					= require('axis'),
+			cssnano 			= require('cssnano'),
+			gulp 					= require('gulp'),
+			nib 					= require('nib'),
+			postcss 			= require('gulp-postcss'),
+			rupture 			= require('rupture'),
+			stylus 				= require('gulp-stylus'),
+			typographic 	= require('typographic');
 
 
 gulp.task('theme', () => {
@@ -16,7 +16,7 @@ gulp.task('theme', () => {
 
 	return gulp.src('./source/theme.styl')
 		.pipe(stylus({
-			use: [nib(), rupture(), typographic()]
+			use: [nib(), rupture(), typographic(), axis()]
 		}))
 		// .pipe(postcss(processors))
 		.pipe(gulp.dest('./css'));
@@ -30,7 +30,7 @@ gulp.task('seeds', () => {
 
   return gulp.src('./source/seeds.styl')
     .pipe(stylus({
-      use: [nib(), rupture(), typographic()]
+      use: [nib(), rupture(), typographic(), axis()]
     }))
     .pipe(postcss(processors))
     .pipe(gulp.dest('./css'));
